@@ -28,8 +28,7 @@ This Neovim configuration aims to provide a seamless development experience with
 
 For Ubuntu:
 
-```sh sudo apt install neovim
-```
+```sh sudo apt install neovim```
 
 
 Open Neovim and run:

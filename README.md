@@ -7,11 +7,8 @@ Welcome to my Neovim configuration repository. This setup is designed to enhance
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Directory Structure](#directory-structure)
-- [Plugins](#plugins)
 - [Keybindings](#keybindings)
-- [Customizations](#customizations)
 - [Screenshots](#screenshots)
-- [Credits](#credits)
 
 ## Introduction
 

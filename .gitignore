@@ -1,0 +1,6 @@
+undodir
+lua/scratchs/*
+.luacheckrc
+.luarc.json
+package*.json
+stylua.toml

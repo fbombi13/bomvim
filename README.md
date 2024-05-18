@@ -25,24 +25,22 @@ This Neovim configuration aims to provide a seamless development experience with
 
 
 ## Install Neovim (if not already installed):
-        For Ubuntu:
 
-        sh 
-sudo apt install neovim
+For Ubuntu:
 
+```sh sudo apt install neovim
+```
 
 
 Open Neovim and run:
 
-sh
-
-    :LazyInstall
+``` sh :LazyInstall ``` 
 
 ## Directory Structure
 
 The configuration is organized as follows:
 
-
+```
 ~/.config/nvim/
 ├── lua
 │   ├── config
@@ -59,20 +57,21 @@ The configuration is organized as follows:
 ├── init.lua
 └── lazy-lock.json
 
+```
 ## Description of Key Files and Directories
 
-- lua/config/: Contains various configuration files.
-- autocmds.lua: Auto commands configuration.
-- diagnostic.lua: Diagnostic settings.
-- init.lua: Main initialization file for Lua configurations.
-- keymaps.lua: Custom key mappings.
-- lazy.lua: Lazy loading configurations for plugins.
-- options.lua: General options and settings.
-- usercmds.lua: User-defined commands.
-- lua/fbombi/: Personal or project-specific configurations.
-- lua/plugins/: Plugin configurations.
-- init.lua: Main initialization file for Neovim.
-- lazy-lock.json: Lockfile for lazy-loaded plugins.
+- `lua/config/`: Contains various configuration files.
+- `autocmds.lua`: Auto commands configuration.
+- `diagnostic.lua`: Diagnostic settings.
+- `init.lua`: Main initialization file for Lua configurations.
+- `keymaps.lua`: Custom key mappings.
+- `lazy.lua`: Lazy loading configurations for plugins.
+- `options.lua`: General options and settings.
+- `usercmds.lua`: User-defined commands.
+- `lua/fbombi/`: Personal or project-specific configurations.
+- `lua/plugins/`: Plugin configurations.
+- `init.lua`: Main initialization file for Neovim.
+- `lazy-lock.json`: Lockfile for lazy-loaded plugins.
 
 ##  Keybindings
 

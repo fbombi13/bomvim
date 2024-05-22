@@ -12,7 +12,6 @@ return {
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
     },
-
     config = function()
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
@@ -65,10 +64,27 @@ return {
                 end,
             },
             mapping = cmp.mapping.preset.insert({
+                ['<Up>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+                ['<Down>'] = cmp.mapping.select_next_item(cmp_select),
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-                ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-                ["<C-Space>"] = cmp.mapping.complete(),
+                -- ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+                ['<CR>'] = cmp.mapping.confirm {
+                    behavior = cmp.ConfirmBehavior.Replace,
+                    select = true,
+                },
+                ["<C-Space>"] = cmp.mapping(cmp.mapping.complete({
+                    reason = cmp.ContextReason.Auto,
+                }), { "i", "c" }),
+                ['<Tab>'] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        cmp.select_next_item()
+                    elseif luasnip.expand_or_jumpable() then
+                        luasnip.expand_or_jump()
+                    else
+                        fallback()
+                    end
+                end, { 'i', 's' }),
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },

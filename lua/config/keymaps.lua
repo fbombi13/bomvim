@@ -1,7 +1,6 @@
 local map = vim.keymap.set
 
 map("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-
 map("v", "<leader>p", function()
     local val = vim.fn.getreg '+'
     vim.api.nvim_command [[normal! p]]
@@ -34,8 +33,8 @@ map(
     { desc = "Save the current file and source it for .vim and .lua files" }
 )
 
-map("n", "<leader>vn", vim.diagnostic.goto_next, { desc = "Goes to next diagnostic error" })
-map("n", "<leader>vp", vim.diagnostic.goto_prev, { desc = "Goes to prev diagnostic error" })
+map("n", "<leader>vnd", vim.diagnostic.goto_next, { desc = "Goes to next diagnostic error" })
+map("n", "<leader>vpd", vim.diagnostic.goto_prev, { desc = "Goes to prev diagnostic error" })
 
 
 
